@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="9" time="702.971816">
+<testcase classname="Publication Evaluation - End2End workflow Initiate evaluation,Editorial triage and Quality evaluation" name="Login to Editorial Page" time="40.356973">
+<system-out><![CDATA[Given Am on Editoral Page...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Publication Evaluation - End2End workflow Initiate evaluation,Editorial triage and Quality evaluation" name="Validate the creation of new Publication Evaluation for a Journal" time="29.066311">
+<system-out><![CDATA[Given am on Editorial Home Page with role "PublicationEvaluator"............passed
+When I create a Publication Evaluation task for a journal for statuses "Sample" "None".passed
+Then Editorial task is initiated in Editorial tool..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Publication Evaluation - End2End workflow Initiate evaluation,Editorial triage and Quality evaluation" name="select ASCA" time="58.101149">
+<system-out><![CDATA[Given am on Editorial Home Page with role "PublicationEvaluator"............passed
+When I edit Publication Evaluation task for a journal using "Publication Id" on the Editorial tool.passed
+When I select the ASCA categories "AA - Acoustics;AF - Agricultural Economics & Policy".passed
+And I Close current browser.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Publication Evaluation - End2End workflow Initiate evaluation,Editorial triage and Quality evaluation" name="Validate the new Editorial Triage task in the task inbox" time="50.485091">
+<system-out><![CDATA[Given I navigate to Task Inbox..............................................passed
+When I view the evaluation tasks created....................................passed
+Then the Editorial Triage task is created in Task Inbox "editorial.triage"..passed
+]]></system-out>
+</testcase>
+<testcase classname="Publication Evaluation - End2End workflow Initiate evaluation,Editorial triage and Quality evaluation" name="Validate the Editorial Triage functionality for editorial which passes the criteria" time="96.311744">
+<system-out><![CDATA[Given the user navigates to new editorial Page for "editorial.triage".......passed
+When all the triage questions are answered as "Yes".........................passed
+And the user Passes the editorial triage....................................passed
+Then task inbox should have the Quality evaluation triggered "evaluation.quality".passed
+]]></system-out>
+</testcase>
+<testcase classname="Publication Evaluation - End2End workflow Initiate evaluation,Editorial triage and Quality evaluation" name="Validate the Quality Evaluation Task in the Task Inbox" time="13.225686">
+<system-out><![CDATA[Given the user is on Task Inbox.............................................passed
+When I view the evaluation tasks created....................................passed
+Then the Quality Evaluation task is created in Task Inbox "evaluation.quality".passed
+]]></system-out>
+</testcase>
+<testcase classname="Publication Evaluation - End2End workflow Initiate evaluation,Editorial triage and Quality evaluation" name="Validate the Quality Evaluation functionality which passes the criteria" time="134.721">
+<system-out><![CDATA[Given the user navigates to new editorial Page for "evaluation.quality".....passed
+When all the quality questions are answered as "Yes"........................passed
+And user enters the quality text "science"..................................passed
+And the user confirms the ASCA selection "AA - Acoustics;AF - Agricultural Economics & Policy".passed
+Then task inbox should have the Impact evaluation triggered "evaluation.impact".passed
+]]></system-out>
+</testcase>
+<testcase classname="Publication Evaluation - End2End workflow Initiate evaluation,Editorial triage and Quality evaluation" name="Validate the Impact Evaluation functionality which passes the criteria" time="279.564267">
+<system-out><![CDATA[Given the user passes the multiple impact tasks created "evaluation.impact".passed
+Then the task should not be present in the Task inbox.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Publication Evaluation - End2End workflow Initiate evaluation,Editorial triage and Quality evaluation" name="Quit all browsers" time="1.139595">
+<system-out><![CDATA[Given I Close all browsers..................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

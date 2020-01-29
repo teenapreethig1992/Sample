@@ -1,0 +1,1784 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/bee7a4abdc590e21eec8618a90c81ff4d16e500a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Cucumber Framework</title>
+
+	<style type='text/css'>
+			
+      
+        
+      
+    
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Cucumber Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Apr 1, 2019 03:41:01 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.1.1</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@tag58</a></li>
+					<li><a href='#'>@newpage</a></li>
+					<li><a href='#'>@EDSP-129,</a></li>
+					<li><a href='#'>@EDSP-131,</a></li>
+					<li><a href='#'>@EDSP-130,</a></li>
+					<li><a href='#'>@EDSP-132,</a></li>
+					<li><a href='#'>@EDSP-133,</a></li>
+					<li><a href='#'>@quality</a></li>
+					<li><a href='#'>@EDSP-189,</a></li>
+					<li><a href='#'>@EDSP-191,</a></li>
+					<li><a href='#'>@EDSP-192,</a></li>
+					<li><a href='#'>@EDSP-193,</a></li>
+					<li><a href='#'>@tag59</a></li>
+					<li><a href='#'>@taskinbox</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Features</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>1</span> feature(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>2</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Scenarios</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='83.333%'><span class='strong'>15</span> scenario(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='16.667%'>3</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='78%'><span class='strong'>39</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='6%'>3</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='16%'>8</span> others
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Features</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage</span>
+						<span class='test-time'>Apr 1, 2019 03:41:01 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='2' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@newpage</span>
+	</div>
+	<span class='duration right label'>0h 0m 55s+465ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Login to Task Inbox Page</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='3' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I navigate to Task Inbox</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='4' status='pass'>
+	<span class='duration right label'>0h 0m 37s+449ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the Editorial Triage functionality for editorial which passes the criteria</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='5' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@tag58</span>
+				<span class='category label white-text'>@newpage</span>
+				<span class='category label white-text'>@EDSP-129,</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the Editorial Triage functionality for editorial which passes the criteria</span>
+			
+				<ul class='steps'>
+					<li test-id='6' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on new editorial Page for "91604735841" "Clarivate Digital Experience (CDX): Seed Application"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='7' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When all the triage questions are answered as "Yes"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='8' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then PASS button should be enabled</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='9' status='pass'>
+	<span class='duration right label'>0h 0m 16s+274ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the Editorial Triage functionality for editorial which fails the criteria</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='10' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@EDSP-131,</span>
+				<span class='category label white-text'>@tag58</span>
+				<span class='category label white-text'>@newpage</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the Editorial Triage functionality for editorial which fails the criteria</span>
+			
+				<ul class='steps'>
+					<li test-id='11' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on new editorial Page for "91604735841" "Clarivate Digital Experience (CDX): Seed Application"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='12' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When all the triage questions are answered as "No"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='13' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then Reject button should be enabled</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='14' status='pass'>
+	<span class='duration right label'>0h 0m 23s+185ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='15' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@EDSP-130,</span>
+				<span class='category label white-text'>@tag58</span>
+				<span class='category label white-text'>@newpage</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No</span>
+			
+				<ul class='steps'>
+					<li test-id='16' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on new editorial Page for "91604735841" "Clarivate Digital Experience (CDX): Seed Application"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='17' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When not all the triage questions are answered Yes</span>
+							<div class='pre'><table><tr><td>Question</td><td>Response</td></tr><tr><td>Article Types?</td><td>Yes</td></tr><tr><td>Titles and Abstracts in English?</td><td>Yes</td></tr><tr><td>Cited References</td><td>Yes</td></tr><tr><td>Clarity of Language</td><td>No</td></tr><tr><td>Timeliness</td><td>Yes</td></tr><tr><td>Website Functionality</td><td>No</td></tr><tr><td>Ethics Statement</td><td>Yes</td></tr><tr><td>Ethical Statements Available</td><td>Yes</td></tr><tr><td>Editorial Affiliation Details</td><td>No</td></tr><tr><td>Authors Affiliation Details</td><td>Yes</td></tr></table></div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='18' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then Reject button should be enabled</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='19' status='pass'>
+	<span class='duration right label'>0h 0m 34s+442ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the Editorial Triage functionality for editorial which passes the criteria</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='20' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@EDSP-132,</span>
+				<span class='category label white-text'>@tag58</span>
+				<span class='category label white-text'>@newpage</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the Editorial Triage functionality for editorial which passes the criteria</span>
+			
+				<ul class='steps'>
+					<li test-id='21' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on new editorial Page for "91604736345" "Clarivate Digital Experience (CDX): Seed Application"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='22' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When all the triage questions are answered as "Yes"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='23' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And the user Passes the editorial triage</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='24' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then task inbox should have the Quality evaluation task triggered "91604736345" "evaluation.quality"</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='25' status='pass'>
+	<span class='duration right label'>0h 1m 20s+750ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='26' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@EDSP-133,</span>
+				<span class='category label white-text'>@tag58</span>
+				<span class='category label white-text'>@newpage</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No</span>
+			
+				<ul class='steps'>
+					<li test-id='27' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on new editorial Page for "91604753189" "Clarivate Digital Experience (CDX): Seed Application"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='28' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When not all the triage questions are answered Yes</span>
+							<div class='pre'><table><tr><td>Question</td><td>Response</td></tr><tr><td>Article Types?</td><td>Yes</td></tr><tr><td>Titles and Abstracts in English?</td><td>Yes</td></tr><tr><td>Cited References</td><td>Yes</td></tr><tr><td>Clarity of Language</td><td>No</td></tr><tr><td>Timeliness</td><td>Yes</td></tr><tr><td>Website Functionality</td><td>No</td></tr><tr><td>Ethics Statement</td><td>Yes</td></tr><tr><td>Ethical Statements Available</td><td>Yes</td></tr><tr><td>Editorial Affiliation Details</td><td>No</td></tr><tr><td>Authors Affiliation Details</td><td>Yes</td></tr></table></div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='29' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And the user Fails the editorial triage</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='30' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then task should not be present in Task inbox "91604753189"</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='31' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@newpage</span>
+	</div>
+	<span class='duration right label'>0h 0m 1s+744ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Quit all browsers</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='32' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I Close all browsers</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI</span>
+						<span class='test-time'>Apr 1, 2019 03:45:11 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='34' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@quality</span>
+	</div>
+	<span class='duration right label'>0h 0m 55s+597ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Login to Task Inbox Page</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='35' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I navigate to Task Inbox</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='36' status='pass'>
+	<span class='duration right label'>0h 0m 17s+540ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the Quality Evaluation Task in the Task Inbox</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='37' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@EDSP-189,</span>
+				<span class='category label white-text'>@quality</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the Quality Evaluation Task in the Task Inbox</span>
+			
+				<ul class='steps'>
+					<li test-id='38' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on Task Inbox</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='39' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I view the tasks created for "91604734064"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='40' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then the Quality Evaluation task is created in the Task Inbox "91604734064" "evaluation.quality"</span>
+							<div class='pre'>Evaluation created</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='41' status='pass'>
+	<span class='duration right label'>0h 0m 25s+312ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the Quality Evaluation UI Page for New Evaluation</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='42' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@EDSP-189,</span>
+				<span class='category label white-text'>@quality</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the Quality Evaluation UI Page for New Evaluation</span>
+			
+				<ul class='steps'>
+					<li test-id='43' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on Task Inbox</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='44' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I select the Evaluation task in the task inbox "91604734064"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='45' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then a new Journal Evaluation page is displayed "Clarivate Digital Experience (CDX): Seed Application" "Quality Evaluation Criteria"</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='46' status='pass'>
+	<span class='duration right label'>0h 0m 15s+712ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the Quality Evaluation functionality for new Page which passes the criteria</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='47' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@quality</span>
+				<span class='category label white-text'>@EDSP-191,</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the Quality Evaluation functionality for new Page which passes the criteria</span>
+			
+				<ul class='steps'>
+					<li test-id='48' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on new editorial Page for "91604734064" "Clarivate Digital Experience (CDX): Seed Application"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='49' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When all the quality questions are answered as "Yes"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='50' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And user enters the quality text "science"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='51' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then both buttons should be enabled</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='52' status='fail'>
+	<span class='duration right label'>0h 0m 21s+366ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the Quality Evaluation functionality which passes the criteria</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='53' class='node scenario fail' status='fail'>
+			<div class='category-list'>
+				<span class='category label white-text'>@quality</span>
+				<span class='category label white-text'>@EDSP-192,</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the Quality Evaluation functionality which passes the criteria</span>
+			
+				<ul class='steps'>
+					<li test-id='54' class='node given fail' status='fail'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on new editorial Page for "91604737153" "Clarivate Digital Experience (CDX): Seed Application"</span>
+							<div class='pre'><pre>java.lang.NullPointerException
+	at com.clarivate.pages.publicationevaluation.TaskInbox.selectWorkflowRow(TaskInbox.java:123)
+	at com.clarivate.stepdefinition.NewEditorialSteps.userIsonNewPage(NewEditorialSteps.java:33)
+	at ?.Given the user is on new editorial Page for "91604737153" "Clarivate Digital Experience (CDX): Seed Application"(Quality.feature:37)
+</pre></div>
+					</li>
+					<li test-id='55' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When all the quality questions are answered as "Yes"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='56' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And user enters the quality text "science"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='57' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And the user Passes the Quality Evaluation</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='58' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then task inbox should have the Impact evaluation task triggered "91604737153" "evaluation.impact"</span>
+							<div class='pre'>skipped</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='59' status='pass'>
+	<span class='duration right label'>0h 1m 13s+747ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the Quality Editorial functionality for which fails the criteria - Some answers equals No</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='60' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@quality</span>
+				<span class='category label white-text'>@EDSP-193,</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the Quality Editorial functionality for which fails the criteria - Some answers equals No</span>
+			
+				<ul class='steps'>
+					<li test-id='61' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on new editorial Page for "91604720039" "Clarivate Digital Experience (CDX): Seed Application"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='62' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When not all the quality questions are answered Yes</span>
+							<div class='pre'><table><tr><td>Questions</td><td>Response</td></tr><tr><td>Editorial Board Structure consistent with the journal scope and contents of the journal?</td><td>No</td></tr><tr><td>Peer Reviewed?</td><td>Yes</td></tr><tr><td>Validity of Statements</td><td>Yes</td></tr><tr><td>Content Relevance</td><td>Yes</td></tr><tr><td>Grant Support Details</td><td>Yes</td></tr><tr><td>Adherence to Community Standards</td><td>No</td></tr><tr><td>Authors in the journal consistent with the journal scope and contents</td><td>Yes</td></tr><tr><td>Acceptable Journal Self-Citation Rate</td><td>No</td></tr></table></div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='63' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And user enters the quality text "science"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='64' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And the user Fails the quality evaluation</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='65' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then task should not be present in Task inbox "91604720039"</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='66' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@quality</span>
+	</div>
+	<span class='duration right label'>0h 0m 1s+756ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Quit all browsers</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='67' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I Close all browsers</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='68'>
+					<div class='test-heading'>
+						<span class='test-name'>Publication Evaluation - Task Inbox EDSP-106</span>
+						<span class='test-time'>Apr 1, 2019 03:48:42 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='69' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@taskinbox</span>
+	</div>
+	<span class='duration right label'>0h 0m 41s+308ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Login to Task Inbox Page</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='70' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Am on Editoral Page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='71' status='fail'>
+	<span class='duration right label'>0h 0m 37s+34ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate the new Editorial Triage task in the task inbox</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='72' class='node scenario fail' status='fail'>
+			<div class='category-list'>
+				<span class='category label white-text'>@tag59</span>
+				<span class='category label white-text'>@taskinbox</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate the new Editorial Triage task in the task inbox</span>
+			
+				<ul class='steps'>
+					<li test-id='73' class='node given fail' status='fail'><b>Given</b>
+						<span class="bdd-step-name">Given I have a publication evaluation initiated in the Editorial tool "Publication Id" "91604735841" "91604736345"</span>
+							<div class='pre'><pre>java.lang.NullPointerException
+	at com.clarivate.pages.publicationevaluation.JediEditorialPage.getEvalStatus(JediEditorialPage.java:190)
+	at com.clarivate.stepdefinition.PublEvaluationSteps.publEvaluationinitated(PublEvaluationSteps.java:54)
+	at ?.Given I have a publication evaluation initiated in the Editorial tool "Publication Id" "91604735841" "91604736345"(TaskInbox.feature:10)
+</pre></div>
+					</li>
+					<li test-id='74' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When I navigate to Task Inbox</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='75' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then the Editorial Triage task is created in the Task Inbox "91604736345" "editorial.triage"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='76' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And no duplicate editorial.triage record is displayed for a single bundle "91604736345"</span>
+							<div class='pre'>skipped</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='77' status='fail'>
+	<span class='duration right label'>0h 0m 22s+159ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Validate that product tasks, review  tasks and product popup are not created for new Publication Evaluation</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='78' class='node scenario fail' status='fail'>
+			<div class='category-list'>
+				<span class='category label white-text'>@tag59</span>
+				<span class='category label white-text'>@taskinbox</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Validate that product tasks, review  tasks and product popup are not created for new Publication Evaluation</span>
+			
+				<ul class='steps'>
+					<li test-id='79' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given the user is on Task Inbox</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='80' class='node when fail' status='fail'><b>When</b>
+						<span class="bdd-step-name">When I view the tasks created for "91604735841"</span>
+							<div class='pre'><pre>java.lang.NullPointerException
+	at com.clarivate.web.utils.Webutils.enterTextinTextbox(Webutils.java:199)
+	at com.clarivate.pages.publicationevaluation.TaskInbox.enterWorkflowId(TaskInbox.java:64)
+	at com.clarivate.stepdefinition.PublEvaluationSteps.i_view_the_tasks_created_for(PublEvaluationSteps.java:203)
+	at ?.When I view the tasks created for "91604735841"(TaskInbox.feature:30)
+</pre></div>
+					</li>
+					<li test-id='81' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then the Review and Product tasks should not be created in the task inbox "91604735841"</span>
+							<div class='pre'>skipped</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='82' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@taskinbox</span>
+	</div>
+	<span class='duration right label'>0h 0m 1s+432ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Close all Browsers</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='83' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I Close all browsers</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag58</span>
+						<span class='category-status right'>
+							<span class='label pass'>6</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 6</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:41:01 PM</td>
+										<td class='linked' test-id='1'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:41:57 PM</td>
+										<td class='linked' test-id='5'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which passes the criteria.Validate the Editorial Triage functionality for editorial which passes the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:42:35 PM</td>
+										<td class='linked' test-id='10'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which fails the criteria.Validate the Editorial Triage functionality for editorial which fails the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:42:51 PM</td>
+										<td class='linked' test-id='15'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:43:14 PM</td>
+										<td class='linked' test-id='20'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which passes the criteria.Validate the Editorial Triage functionality for editorial which passes the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:43:48 PM</td>
+										<td class='linked' test-id='26'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@newpage</span>
+						<span class='category-status right'>
+							<span class='label pass'>7</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 7</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:41:02 PM</td>
+										<td class='linked' test-id='2'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Login to Task Inbox Page</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:41:57 PM</td>
+										<td class='linked' test-id='5'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which passes the criteria.Validate the Editorial Triage functionality for editorial which passes the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:42:35 PM</td>
+										<td class='linked' test-id='10'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which fails the criteria.Validate the Editorial Triage functionality for editorial which fails the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:42:51 PM</td>
+										<td class='linked' test-id='15'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:43:14 PM</td>
+										<td class='linked' test-id='20'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which passes the criteria.Validate the Editorial Triage functionality for editorial which passes the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:43:48 PM</td>
+										<td class='linked' test-id='26'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:45:09 PM</td>
+										<td class='linked' test-id='31'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Quit all browsers</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EDSP-129,</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:41:57 PM</td>
+										<td class='linked' test-id='5'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which passes the criteria.Validate the Editorial Triage functionality for editorial which passes the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EDSP-131,</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:42:35 PM</td>
+										<td class='linked' test-id='10'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which fails the criteria.Validate the Editorial Triage functionality for editorial which fails the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EDSP-130,</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:42:51 PM</td>
+										<td class='linked' test-id='15'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EDSP-132,</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:43:14 PM</td>
+										<td class='linked' test-id='20'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which passes the criteria.Validate the Editorial Triage functionality for editorial which passes the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EDSP-133,</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:43:48 PM</td>
+										<td class='linked' test-id='26'>Publication Evaluation - New workflow EDSP-81 - Editorial Triage.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No.Validate the Editorial Triage functionality for editorial which fails the criteria - Some answers equals No</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@quality</span>
+						<span class='category-status right'>
+							<span class='label pass'>6</span>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 6</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:45:11 PM</td>
+										<td class='linked' test-id='34'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Login to Task Inbox Page</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:46:07 PM</td>
+										<td class='linked' test-id='37'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Evaluation Task in the Task Inbox.Validate the Quality Evaluation Task in the Task Inbox</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:46:24 PM</td>
+										<td class='linked' test-id='42'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Evaluation UI Page for New Evaluation.Validate the Quality Evaluation UI Page for New Evaluation</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:46:49 PM</td>
+										<td class='linked' test-id='47'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Evaluation functionality for new Page which passes the criteria.Validate the Quality Evaluation functionality for new Page which passes the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:47:05 PM</td>
+										<td class='linked' test-id='53'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Evaluation functionality which passes the criteria.Validate the Quality Evaluation functionality which passes the criteria</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:47:26 PM</td>
+										<td class='linked' test-id='60'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Editorial functionality for which fails the criteria - Some answers equals No.Validate the Quality Editorial functionality for which fails the criteria - Some answers equals No</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:48:40 PM</td>
+										<td class='linked' test-id='66'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Quit all browsers</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EDSP-189,</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:46:07 PM</td>
+										<td class='linked' test-id='37'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Evaluation Task in the Task Inbox.Validate the Quality Evaluation Task in the Task Inbox</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:46:24 PM</td>
+										<td class='linked' test-id='42'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Evaluation UI Page for New Evaluation.Validate the Quality Evaluation UI Page for New Evaluation</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EDSP-191,</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:46:49 PM</td>
+										<td class='linked' test-id='47'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Evaluation functionality for new Page which passes the criteria.Validate the Quality Evaluation functionality for new Page which passes the criteria</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EDSP-192,</span>
+						<span class='category-status right'>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:47:05 PM</td>
+										<td class='linked' test-id='53'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Evaluation functionality which passes the criteria.Validate the Quality Evaluation functionality which passes the criteria</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@EDSP-193,</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:47:26 PM</td>
+										<td class='linked' test-id='60'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Editorial functionality for which fails the criteria - Some answers equals No.Validate the Quality Editorial functionality for which fails the criteria - Some answers equals No</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag59</span>
+						<span class='category-status right'>
+							<span class='label fail'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 3</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:48:42 PM</td>
+										<td class='linked' test-id='68'>Publication Evaluation - Task Inbox EDSP-106</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:49:23 PM</td>
+										<td class='linked' test-id='72'>Publication Evaluation - Task Inbox EDSP-106.Validate the new Editorial Triage task in the task inbox.Validate the new Editorial Triage task in the task inbox</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:50:00 PM</td>
+										<td class='linked' test-id='78'>Publication Evaluation - Task Inbox EDSP-106.Validate that product tasks, review  tasks and product popup are not created for new Publication Evaluation.Validate that product tasks, review  tasks and product popup are not created for new Publication Evaluation</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@taskinbox</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+							<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2019 03:48:42 PM</td>
+										<td class='linked' test-id='69'>Publication Evaluation - Task Inbox EDSP-106.Login to Task Inbox Page</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:49:23 PM</td>
+										<td class='linked' test-id='72'>Publication Evaluation - Task Inbox EDSP-106.Validate the new Editorial Triage task in the task inbox.Validate the new Editorial Triage task in the task inbox</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:50:00 PM</td>
+										<td class='linked' test-id='78'>Publication Evaluation - Task Inbox EDSP-106.Validate that product tasks, review  tasks and product popup are not created for new Publication Evaluation.Validate that product tasks, review  tasks and product popup are not created for new Publication Evaluation</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2019 03:50:22 PM</td>
+										<td class='linked' test-id='82'>Publication Evaluation - Task Inbox EDSP-106.Close all Browsers</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.NullPointerException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Apr 1, 2019 03:47:05 PM</td>
+                                                        <td class='linked' test-id='54'>Publication Evaluation - New workflow EDSP-83 - Quality User Interface - Questions to be answered in the UI.Validate the Quality Evaluation functionality which passes the criteria.Validate the Quality Evaluation functionality which passes the criteria.Given the user is on new editorial Page for "91604737153" "Clarivate Digital Experience (CDX): Seed Application"</td>
+                                                        <td><pre><pre>java.lang.NullPointerException
+	at com.clarivate.pages.publicationevaluation.TaskInbox.selectWorkflowRow(TaskInbox.java:123)
+	at com.clarivate.stepdefinition.NewEditorialSteps.userIsonNewPage(NewEditorialSteps.java:33)
+	at ?.Given the user is on new editorial Page for "91604737153" "Clarivate Digital Experience (CDX): Seed Application"(Quality.feature:37)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Apr 1, 2019 03:49:23 PM</td>
+                                                        <td class='linked' test-id='73'>Publication Evaluation - Task Inbox EDSP-106.Validate the new Editorial Triage task in the task inbox.Validate the new Editorial Triage task in the task inbox.Given I have a publication evaluation initiated in the Editorial tool "Publication Id" "91604735841" "91604736345"</td>
+                                                        <td><pre><pre>java.lang.NullPointerException
+	at com.clarivate.pages.publicationevaluation.JediEditorialPage.getEvalStatus(JediEditorialPage.java:190)
+	at com.clarivate.stepdefinition.PublEvaluationSteps.publEvaluationinitated(PublEvaluationSteps.java:54)
+	at ?.Given I have a publication evaluation initiated in the Editorial tool "Publication Id" "91604735841" "91604736345"(TaskInbox.feature:10)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Apr 1, 2019 03:50:00 PM</td>
+                                                        <td class='linked' test-id='80'>Publication Evaluation - Task Inbox EDSP-106.Validate that product tasks, review  tasks and product popup are not created for new Publication Evaluation.Validate that product tasks, review  tasks and product popup are not created for new Publication Evaluation.When I view the tasks created for "91604735841"</td>
+                                                        <td><pre><pre>java.lang.NullPointerException
+	at com.clarivate.web.utils.Webutils.enterTextinTextbox(Webutils.java:199)
+	at com.clarivate.pages.publicationevaluation.TaskInbox.enterWorkflowId(TaskInbox.java:64)
+	at com.clarivate.stepdefinition.PublEvaluationSteps.i_view_the_tasks_created_for(PublEvaluationSteps.java:203)
+	at ?.When I view the tasks created for "91604735841"(TaskInbox.feature:30)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>3</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>18</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>50</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Apr 1, 2019 03:41:01 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Apr 1, 2019 03:50:24 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>563,187ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>User Name</td>
+								<td>20724</td>
+							</tr>
+							<tr>
+								<td>Time Zone</td>
+								<td>Asia/Calcutta</td>
+							</tr>
+							<tr>
+								<td>Machine</td>
+								<td>Windows 1064 Bit</td>
+							</tr>
+							<tr>
+								<td>Selenium</td>
+								<td>3.7.0</td>
+							</tr>
+							<tr>
+								<td>Maven</td>
+								<td>3.5.2</td>
+							</tr>
+							<tr>
+								<td>Java Version</td>
+								<td>1.8.0_151</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>@tag58</td>
+							<td>6</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@newpage</td>
+							<td>7</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EDSP-129,</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EDSP-131,</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EDSP-130,</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EDSP-132,</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EDSP-133,</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@quality</td>
+							<td>6</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EDSP-189,</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EDSP-191,</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EDSP-192,</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@EDSP-193,</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@tag59</td>
+							<td>0</td>
+							<td>3</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@taskinbox</td>
+							<td>2</td>
+							<td>2</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 1,
+				failParent: 2,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 2,
+				
+				passChild: 15,
+				failChild: 3,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 3,
+				
+				passGrandChild: 39,
+				failGrandChild: 3,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 8,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 11,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 			
+      
+        $(document).ready(function() {
+        
+        });
+      
+    
+ 		</script>
+	</body>
+	
+</html>
